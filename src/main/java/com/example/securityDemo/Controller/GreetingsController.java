@@ -22,7 +22,6 @@ public class GreetingsController {
     }
 
     @GetMapping("/user")
-    @PreAuthorize("hasRole('USER')")
     public String helloUser(){
         return "Hello User! Welcome to Spring Launch";
     }
