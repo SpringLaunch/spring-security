@@ -1,6 +1,6 @@
-package com.example.securityDemo.entity;
+package com.example.userService.entity;
 
-import com.example.securityDemo.enums.Role;
+import com.example.userService.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,6 +22,11 @@ public class UserEntity {
 
     private String password;
 
+    @Column(unique = true)
+    private String email;
+
     @Enumerated(EnumType.STRING)
     private List<Role> roles;
+
+    private boolean enabled;
 }
